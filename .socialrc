@@ -1,0 +1,6 @@
+Config
+  { cfg_smtp_server = "mail.me.me"
+  , cfg_email = "me@me.me"
+  , cfg_password = "password"
+  }
+

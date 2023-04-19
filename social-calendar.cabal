@@ -1,0 +1,85 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           social-calendar
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/isovector/social-calendar#readme>
+homepage:       https://github.com/isovector/social-calendar#readme
+bug-reports:    https://github.com/isovector/social-calendar/issues
+author:         Sandy Maguire
+maintainer:     sandy@sandymaguire.me
+copyright:      Sandy Maguire
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/isovector/social-calendar
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_social_calendar
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , mime-mail
+    , mtl
+    , smtp-mail
+    , text
+    , time
+  default-language: Haskell2010
+
+executable social-calendar-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_social_calendar
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , mime-mail
+    , mtl
+    , smtp-mail
+    , social-calendar
+    , text
+    , time
+  default-language: Haskell2010
+
+test-suite social-calendar-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_social_calendar
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , containers
+    , mime-mail
+    , mtl
+    , smtp-mail
+    , social-calendar
+    , text
+    , time
+  default-language: Haskell2010
